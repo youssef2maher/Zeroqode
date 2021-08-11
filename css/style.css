@@ -159,7 +159,7 @@ nav button:hover {
 @media (max-width: 576px) {
     
     nav .logo {
-        background-image: url(/svg/mob-logo.svg);
+        background-image: url(https://raw.githubusercontent.com/youssef2maher/Zeroqode/113aeaffab08d32098c8ef34c7e8c188ce9f4a22/svg/mob-logo.svg);
     }
 
     nav button {
