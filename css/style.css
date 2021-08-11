@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --arial-font: Arial, Helvetica, sans-serif;
+    --light-blue: rgb(26, 175, 208);
+}
+
+
+.container {
+    width: 95vw;
+    height: 100%;
+    margin: auto;
+    display: flex;
+}
+
+
+/******************** Nav Style ********************/
+
+nav {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    /* box-shadow: 0px 0 4px rgb(204, 204, 204); */
+    background-color: #FFF;
+}
+
+nav .toggler {
+    width: 40px;
+    height: 20px;
+    margin-right: 20px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    display: none;
+}
+
+nav .toggler hr {
+    margin-top: 7px;
+    border-color: #000;
+}
+
+nav .container {
+    align-items: center;
+}
+
+nav .logo {
+    width: 100%;
+    height: 8vh;
+    background-image: url(/svg/logo.svg);
+    background-repeat: no-repeat;
+    background-size: auto 95%;
+}
+
+nav .nav-links {
+    width: 100%;
+}
+
+nav .nav-links ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+nav .nav-links ul li {
+    padding-right: 5%;
+}
+
+nav .nav-links ul li a {
+    color: #000;
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: var(--arial-font);
+}
+
+nav .nav-links ul li a:hover {
+    color: var(--light-blue);
+}
+
+nav .nav-links ul li:nth-child(1)::after, li:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 5px solid transparent;
+    border-top: 5px solid #000;
+}
+
+nav .nav-links ul li:hover:nth-child(1)::after, nav .nav-links ul li:hover:nth-child(2)::after {
+    border-top-color: var(--light-blue);
+}
+
+nav .nav-links ul li:last-child {
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+nav .nav-links ul li:last-child:hover > div {
+    background-color: var(--light-blue);
+}
+
+nav .nav-links ul li:last-child div {
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #000;
+}
+
+nav button {
+    width: 350px;
+    height: 7vh;
+    padding: 0;
+    background-color: transparent;
+    border: 1px solid var(--light-blue);
+    color: var(--light-blue);
+    font-size: 100%;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: var(--light-blue);
+    color: #FFF;
+}
+
+@media (max-width: 786px) {
+    
+    nav {
+        height: 12vh;
+    }
+
+    nav .toggler {
+        display: block;
+    }
+
+    nav .logo {
+        height: 7vh;
+    }
+
+    nav .nav-links {
+        display: none;
+    }
+
+    nav button {
+        width: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    
+    nav .logo {
+        background-image: url(/svg/mob-logo.svg);
+    }
+
+    nav button {
+        width: 250px;
+    }
+}
+
+/******************** /Nav Style ********************/
+
+
+
+/******************** Carousel Style ********************/
+
+.carousel {
+    width: 100%;
+    height: 100vh;
+    padding-top: 10%;
+}
+
+.carousel .content {
+    width: 100%;
+}
+
+.carousel .content h1 {
+    padding-top: 10%;
+    color: #000;
+    font-family: var(--arial-font);
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.carousel .content h1 span {
+    color: var(--light-blue);
+}
+
+.carousel .content p {
+    padding-top: 2%;
+    color: #000;
+    font-family: var(--arial-font);
+    font-size: 20px;
+}
+
+.carousel .content p span {
+    color: var(--light-blue);
+}
+
+.carousel .content p:first-of-type {
+    padding-top: 8%;
+}
+
+.carousel .content p:last-of-type {
+    padding-bottom: 10%;
+}
+
+.carousel .content button {
+    width: 220px;
+    height: 50px;
+    background-color: var(--light-blue);
+    color: #FFF;
+    font-family: var(--arial-font);
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.carousel .img {
+    width: 110vw;
+}
+
+.carousel .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 786px) {
+
+    .carousel {
+        height: 170vh;
+    }
+    
+    .carousel .container {
+        flex-direction: column;
+    }
+
+    .carousel .content h1 {
+        padding-top: 5%;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .carousel .content p {
+        text-align: center;
+    }
+
+    .carousel .content button {
+        width: 100%;
+    }
+
+    .carousel .img {
+        width: 100%;
+    }
+
+    .carousel .img img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .carousel {
+        height: 150vh;
+    }
+    
+    .carousel {
+        padding-top: 20%;
+    }
+
+    .carousel .content p:first-of-type {
+        padding-top: 15%;
+    }
+    
+    .carousel .content p:last-of-type {
+        padding-bottom: 15%;
+    }
+
+    .carousel .img {
+        padding-top: 20px;
+    }
+}
+
+/******************** /Carousel Style ********************/
+
+
+
+.space {
+    width: 100%;
+    height: 200vh;
+}
