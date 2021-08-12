@@ -8,6 +8,11 @@
 :root {
     --arial-font: Arial, Helvetica, sans-serif;
     --light-blue: rgb(26, 175, 208);
+    --grey-color: #333;
+    --big-header-font-size: 55px;
+    --small-header-font-size: 25px;
+    --big-paragraph-font-size: 20px;
+    --small-paragraph-font-size: 15px;
 }
 
 
@@ -25,6 +30,7 @@ nav {
     width: 100%;
     height: 10vh;
     position: fixed;
+    /* box-shadow: 0px 0 4px rgb(204, 204, 204); */
     background-color: #FFF;
 }
 
@@ -49,7 +55,7 @@ nav .container {
 nav .logo {
     width: 100%;
     height: 8vh;
-    background-image: url(https://raw.githubusercontent.com/youssef2maher/Zeroqode/6b4d832cbcdc825a7c7ce6808edee691e0523a9d/svg/logo.svg);
+    background-image: url(/svg/logo.svg);
     background-repeat: no-repeat;
     background-size: auto 95%;
 }
@@ -159,7 +165,7 @@ nav button:hover {
 @media (max-width: 576px) {
     
     nav .logo {
-        background-image: url(https://raw.githubusercontent.com/youssef2maher/Zeroqode/113aeaffab08d32098c8ef34c7e8c188ce9f4a22/svg/mob-logo.svg);
+        background-image: url(/svg/mob-logo.svg);
     }
 
     nav button {
@@ -238,7 +244,7 @@ nav button:hover {
 @media (max-width: 786px) {
 
     .carousel {
-        height: 170vh;
+        height: 180vh;
     }
     
     .carousel .container {
@@ -272,7 +278,7 @@ nav button:hover {
 @media (max-width: 576px) {
 
     .carousel {
-        height: 150vh;
+        height: 155vh;
     }
     
     .carousel {
@@ -294,6 +300,347 @@ nav button:hover {
 
 /******************** /Carousel Style ********************/
 
+
+
+/******************** Benefit Section Style ********************/
+
+.benefit {
+    width: 100%;
+    padding-top: 3%;
+}
+
+.benefit header {
+    width: 40%;
+}
+
+.benefit header h2 {
+    font-family: var(--arial-font);
+    font-size: var(--big-header-font-size);
+}
+
+.benefit header p {
+    padding-top: 25px;
+    padding-bottom: 50px;
+    font-family: var(--arial-font);
+    font-size: var(--big-paragraph-font-size);
+    color: var(--grey-color);
+    line-height: 35px;
+}
+
+.benefit header button {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.benefit header button h4 {
+    padding-left: 20px;
+    font-family: var(--arial-font);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.benefit header button .icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/tech-crunch-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.benefit .card-container {
+    width: 60%;
+    padding-top: 1%;
+    padding-left: 10%;
+    display: grid;
+    column-gap: 15%;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.benefit .card-container .card {
+    width: 100%;
+}
+
+.benefit .card-container .card:nth-child(3), .benefit .card-container .card:nth-child(4) {
+    margin-top: 100px;
+}
+
+.benefit .card-container .card .icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(/img/tech-crunch-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.benefit .card-container .card:nth-child(1) .icon {
+    background-image: url(/img/time-icon.png);
+}
+
+.benefit .card-container .card:nth-child(2) .icon {
+    background-image: url(/img/fire-icon.png);
+}
+
+.benefit .card-container .card:nth-child(3) .icon {
+    background-image: url(/img/mobile-icon.png);
+}
+
+.benefit .card-container .card:nth-child(4) .icon {
+    background-image: url(/img/grow-icon.png);
+}
+
+.benefit .card-container .card h3 {
+    padding-top: 10px;
+    font-family: var(--arial-font);
+    font-size: var(--small-header-font-size);
+}
+
+.benefit .card-container .card p {
+    padding-top: 10px;
+    padding-right: 20px;
+    line-height: 25px;
+    font-family: var(--arial-font);
+    font-size: var(--small-paragraph-font-size);
+    color: var(--grey-color);
+}
+
+@media (max-width: 786px) {
+    
+    .benefit .container {
+        flex-direction: column;
+    }
+
+    .benefit header {
+        width: 100%;
+    }
+
+    .benefit header h2 {
+        font-size: 35px;
+    }
+
+    .benefit header p {
+        text-align: center;
+    }
+
+    .benefit .card-container {
+        width: 100%;
+        padding-left: 0;
+        padding-top: 30px;
+        column-gap: 10%;
+    }
+
+    .benefit .card-container .card:nth-child(3), .benefit .card-container .card:nth-child(4) {
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .benefit .container {
+        width: 90vw;
+    }
+    
+    .benefit header h2 {
+        text-align: center;
+    }
+
+    .benefit .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit .card-container .card {
+        margin-top: 20px;
+    }
+}
+
+/******************** /Benefit Section Style ********************/
+
+
+
+/******************** Templates Section Style ********************/
+
+.template {
+    width: 100%;
+    padding-top: 130px;
+}
+
+.template .container {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    border-radius: 10px;
+    background-color: rgb(225, 235, 238);
+}
+
+.template .inner-container {
+    width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.template .inner-container header {
+    padding-right: 100px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.template .inner-container header h5 {
+    font-family: var(--arial-font);
+    font-size: var(--small-paragraph-font-size);
+    color: var(--grey-color);
+}
+
+.template .inner-container header h2 {
+    padding-top: 20px;
+    font-family: var(--arial-font);
+    font-size: var(--big-header-font-size);
+}
+
+.template .inner-container header p {
+    padding-top: 20px;
+    line-height: 35px;
+    font-family: var(--arial-font);
+    font-size: var(--big-paragraph-font-size);
+    color: var(--grey-color);
+}
+
+.template .inner-container .card {
+    width: 95%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.template .inner-container .card .card-inner-container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.template .inner-container .card .img {
+    width: 100%;
+}
+
+.template .inner-container .card .img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.template .inner-container .card h3 {
+    padding-top: 10px;
+    font-family: var(--arial-font);
+    font-size: var(--big-paragraph-font-size);
+}
+
+.template .inner-container .card h3 span {
+    display: block;
+}
+
+.template .inner-container .card .status {
+    width: 100%;
+    padding-top: 10px;
+    display: flex;
+}
+
+.template .inner-container .card .status h6 {
+    font-family: var(--arial-font);
+    font-size: var(--small-paragraph-font-size);
+    font-weight: lighter;
+    align-self: center;
+
+}
+
+.template .inner-container .card .status h6::first-letter {
+    text-transform: uppercase;
+}
+
+.template .inner-container .card .status h6:first-of-type {
+    padding-right: 2%;
+}
+
+.template .inner-container .card .status h6:last-of-type {
+    padding-left: 2%;
+}
+
+.template .inner-container .card .status .dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--grey-color);
+    align-self: center;
+    border-radius: 100%;
+}
+
+.template .inner-container .card .status .price {
+    width: 20%;
+    padding: 5px;
+    margin-left: auto;
+    padding-left: 10px;
+    background-color: rgb(225, 235, 238);
+    border-radius: 5px;
+}
+
+.template .inner-container .card .status .price h6 {
+    font-weight: bold;
+}
+
+.template .inner-container button {
+    height: 55px;
+    background-color: rgb(181, 207, 212);
+    font-size: 120%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+@media (max-width: 786px) {
+    
+    .template .inner-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .template .inner-container header {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .template .inner-container header h2 {
+        font-size: 35px;
+    }
+
+    .template .inner-container .card:first-of-type {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+    }
+
+    .template .inner-container .card:first-of-type .card-inner-container {
+        width: 90%;
+    }
+
+    .template .inner-container button {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 576px) {
+    .template .inner-container .card {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 100%;
+    }
+}
+
+/******************** /Templates Section Style ********************/
 
 
 .space {
